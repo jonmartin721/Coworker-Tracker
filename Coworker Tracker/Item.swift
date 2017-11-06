@@ -2,9 +2,9 @@
 //  Item.swift
 //  Homepwner
 //
-//  Created by Dvijesh Shastri on 10/23/17.
-//  Copyright © 2017 UHD. All rights reserved.
-//
+//  Created by Jonathan Martin on 11/6/17.
+
+
 import UIKit
 
 class Item: NSObject{
@@ -24,7 +24,7 @@ class Item: NSObject{
     
     convenience init(random: Bool = false) {
         if random {
-            let adjectives = ["Fluffy", "Rusty", "Shiny"]
+            let adjectives = ["", "Rusty", "Shiny"]
             let nouns = ["Bear", "Spork", "Mac"]
             
             var idx = arc4random_uniform(UInt32(adjectives.count))
@@ -48,4 +48,3 @@ class Item: NSObject{
     }
 
 }
-
