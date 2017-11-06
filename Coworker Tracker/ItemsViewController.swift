@@ -1,9 +1,8 @@
 //
 //  ItemsViewController.swift
-//  Homepwner
+//  Coworker Tracker
 //
-//  Created by Dvijesh Shastri on 10/23/17.
-//  Copyright © 2017 UHD. All rights reserved.
+//  Created by Jonathan Martin on 11/6/17.
 //
 
 import UIKit
@@ -29,9 +28,11 @@ class ItemsViewController: UITableViewController{
         let item = itemStore.allItems[indexPath.row]
         
         //configure the cell with the Item
-        cell.nameLabel.text = item.name
-        cell.serialNumberLabel.text = item.serialNumber
-        cell.valueLabel.text = "$\(item.valueInDollars)"
+        cell.firstNameLabel.text = item.firstName
+        cell.lastNameLabel.text = item.lastName
+        cell.companyNameLabel.text = item.company
+        cell.phoneNumberLabel.text = String(item.phone)
+        cell.positionLabel.text = item.position
         
         return cell
         
@@ -87,7 +88,7 @@ class ItemsViewController: UITableViewController{
             let item = itemStore.allItems[indexPath.row]
             
             //Step-a. Create an alert
-            let title = "Delete \(item.name)?"
+            let title = "Delete \(item.firstName) \(item.lastName)?"
             let message = "Are you sure you want to delete this item?"
             
             let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
@@ -129,7 +130,7 @@ class ItemsViewController: UITableViewController{
                 //get the item associated with this row and pass it along
                 let item = itemStore.allItems[row]
                 let detailViewController = segue.destination as! DetailViewController
-                detailViewController.item = item
+                //detailViewController.item = item
             }
             
         default:

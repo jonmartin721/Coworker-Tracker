@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Homepwner
+//  Coworker Tracker
 //
 //  Created by Dvijesh Shastri on 10/23/17.
 //  Copyright © 2017 UHD. All rights reserved.
