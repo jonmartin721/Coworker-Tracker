@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Coworker Tracker
+//  Homepwner
 //
-//  Created by Jonathan Martin on 11/6/17.
-//  Copyright © 2017 Jonathan Martin. All rights reserved.
+//  Created by Dvijesh Shastri on 10/23/17.
+//  Copyright © 2017 UHD. All rights reserved.
 //
 
 import UIKit
@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let itemStore = ItemStore()
+        
+        let itemsController = window!.rootViewController as! ItemsViewController
+        itemsController.itemStore = itemStore
+        
         return true
     }
 
