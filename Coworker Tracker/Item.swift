@@ -12,9 +12,9 @@ class Item: NSObject{
     var lastName: String
     var company: String
     var position: String
-    let phone: Int
+    var phone: String
     
-    init(firstName: String, lastName: String, company: String, position: String, phone: Int) {
+    init(firstName: String, lastName: String, company: String, position: String, phone: String) {
         self.firstName = firstName
         self.lastName = lastName
         self.company = company
@@ -44,12 +44,18 @@ class Item: NSObject{
             let idxPosition = arc4random_uniform(UInt32(positions.count))
             let randomPosition = positions[Int(idxPosition)]
             
-            let randomPhone = Int(arc4random_uniform(100000))
+            var randomPhone: String = ""
+            
+            for _ in 1...10 {
+                let a = arc4random_uniform(10)
+                randomPhone += String(a)
+                
+            }
             
             self.init(firstName: randomFirstName, lastName: randomLastName, company: randomCompany, position: randomPosition, phone: randomPhone)
         }
         else {
-            self.init(firstName: "", lastName: "", company: "", position: "", phone: 0)
+            self.init(firstName: "", lastName: "", company: "", position: "", phone: "")
         }
     }
 
