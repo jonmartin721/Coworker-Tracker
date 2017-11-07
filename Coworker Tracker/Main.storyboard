@@ -14,7 +14,12 @@
         <!--Detail View Controller-->
         <scene sceneID="qz2-PF-Wmq">
             <objects>
-                <viewController id="dqN-Q9-Kan" customClass="DetailViewController" customModule="Coworker_Tracker" customModuleProvider="target" sceneMemberID="viewController"/>
+                <viewController id="dqN-Q9-Kan" customClass="DetailViewController" customModule="Coworker_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="krq-ZD-Cic">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </mapView>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgw-nI-2xG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="356" y="92.203898050974516"/>
