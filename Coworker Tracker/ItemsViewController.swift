@@ -34,8 +34,19 @@ class ItemsViewController: UITableViewController{
         cell.phoneNumberLabel.text = String(item.phone)
         cell.positionLabel.text = item.position
         
+        //display total number of friends
+//        let items: [Item]
+//        if indexPath.section == 0 && indexPath.row == items.count {
+//            cell.textLabel?.text = "No more items!"
+//            cell.detailTextLabel?.text = ""
+//        } else {
+//            let item = items[indexPath.row]
+//            cell.textLabel?.text = items.firstName
+//            cell.detailTextLabel?.text = "\(item.phone)"
+//            cell.textLabel?.font = UIFont.systemFont(ofSize: 20)
+//            cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 20)
+//        }
         return cell
-        
     }
     
     override func viewDidLoad() {

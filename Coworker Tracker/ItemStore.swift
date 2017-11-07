@@ -19,7 +19,7 @@ class ItemStore {
     }
     
     init() {
-        for _ in 0..<5 {
+        for _ in 0..<10 {
             createItem()
         }
     }
