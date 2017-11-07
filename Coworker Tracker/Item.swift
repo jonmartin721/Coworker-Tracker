@@ -27,10 +27,10 @@ class Item: NSObject{
     convenience init(random: Bool = false) {
         if random {
             //define the random possibilities
-            let firstNames = ["David", "Jonathan", "Michael", "Julio", "Peter"]
-            let lastNames = ["Martin", "Vazquez", "Rodriguez", "Wilson", "Williams"]
-            let positions = ["Cashier", "CSR", "Manager", "Director", "Owner", "CEO"]
-            let companies = ["Google", "Microsoft", "Walmart", "Target", "IBM"]
+            let firstNames = ["David", "Jonathan", "Michael", "Julio", "Peter", "Jacob", "Mark", "Emily", "Daniel", "Barbara"]
+            let lastNames = ["Martin", "Vazquez", "Rodriguez", "Wilson", "Williams", "Peterson", "Brown", "Anderson"]
+            let positions = ["Cashier", "CSR", "Manager", "Director", "Owner", "CEO", "Distributor", "Brand Ambassador"]
+            let companies = ["Google", "Microsoft", "Walmart", "Target", "IBM", "Apple", "Barnes and Noble"]
             
             
             let idxFirst = arc4random_uniform(UInt32(firstNames.count))
