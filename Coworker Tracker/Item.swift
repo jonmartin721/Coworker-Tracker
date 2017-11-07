@@ -39,14 +39,18 @@ class Item: NSObject{
             let randomLastName = lastNames[Int(idxLast)]
             
             let idxCompany = arc4random_uniform(UInt32(companies.count))
-            let randomCompany = positions[Int(idxCompany)]
+            let randomCompany = companies[Int(idxCompany)]
             
             let idxPosition = arc4random_uniform(UInt32(positions.count))
             let randomPosition = positions[Int(idxPosition)]
             
             var randomPhone: String = ""
             
-            for _ in 1...10 {
+            for a in 1...10 {
+                if (a == 4 || a == 7) {
+                    randomPhone += "-"
+                }
+                
                 let a = arc4random_uniform(10)
                 randomPhone += String(a)
                 
