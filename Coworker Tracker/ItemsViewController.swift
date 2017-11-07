@@ -89,7 +89,7 @@ class ItemsViewController: UITableViewController{
             
             //Step-a. Create an alert
             let title = "Delete \(item.firstName) \(item.lastName)?"
-            let message = "Are you sure you want to delete this item?"
+            let message = "Are you sure you want to delete this coworker?"
             
             let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
             
